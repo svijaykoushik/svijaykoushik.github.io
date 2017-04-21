@@ -74,6 +74,12 @@ a:visted
 	position:relative;
 	margin-top: 20%;
 	margin-left:15%;
+	max-width: 1080px;
+}
+
+.content div
+{
+	font-size:x-large;
 }
 
 .myslef
