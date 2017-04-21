@@ -87,6 +87,30 @@ a:visted
 	justify-content:center;
 }
 
+p.samoogam {
+    text-align: center;
+}
+
+p.samoogam a {
+    padding-right: 30px;
+}
+
+i.fa.fa-stack-overflow {
+    color: #f48024;
+}
+
+i.fa.fa-linkedin-square {
+    color: #0077b5;
+}
+
+i.fa.fa-google-plus-official {
+    color: #db4437;
+}
+
+i.fa.fa-facebook-official {
+    color: #3b5998;
+}
+
 @keyframes directionDown
 {
 	0%
