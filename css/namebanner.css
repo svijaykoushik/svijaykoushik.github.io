@@ -149,6 +149,14 @@ div.skill-element h3 {
     width: 90%;
 }
 
+.more-skills{
+	padding-top:20px;
+}
+
+.text-center{
+	text-align:center;
+}
+
 @keyframes directionDown {
     0% {
         transform: translateY(20px);
@@ -222,15 +230,19 @@ div.skill-element h3 {
         transform: scale( .75 );
     }
 }
-
-@media(min-width: 992px) and (max-width: 1500px) {
+@media(min-width:1501px) {
 	.content{
     max-width: 1080px;
     }
 }
-@media(min-width: 768px) and (max-width: 991px) {
+@media(min-width: 992px) and (max-width: 1500px) {
 	.content{
     max-width: 800px;
+    }
+}
+@media(min-width: 768px) and (max-width: 991px) {
+	.content{
+    max-width: 600px;
     }
 }
 @media(max-width: 767px) {

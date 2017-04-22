@@ -4,6 +4,9 @@
         <title>Vijay Koushik</title>
         <link rel="stylesheet" href="css/namebanner.css" type="text/css">
         <link rel="stylesheet" href="https://use.fontawesome.com/d902360c6f.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.5.2/jquery.smooth-scroll.min.js"></script>
+        <script src="js/app.js"></script>
     </head>
     <body>
         <div class="banner">
@@ -13,19 +16,23 @@
                 &nbsp;to code
             
             
+            
             </div>
             <div class="direction direction-down">
-                <a href="#about">
+                <a href="#about" data-scroll>
                     <i class="fa fa-arrow-circle-down"></i>
                 </a>
             </div>
         </div>
         <div class="content">
-            <h2 id="about">About</h2>
+            <h2>
+                <a name="about">About</a>
+            </h2>
             <div class="myself">
                 <p>
                     A developer by hobby, passionate in User Interface and User Experience designing, with a Professional experience of 1 year in UI designing. I love to create programs because, it's fun!&nbsp;<i class="fa fa-smile-o"></i>
                     . I also love to learn new methods and technologies that make UI/UX designing better.
+                
                 
                 
                 </p>
@@ -75,23 +82,26 @@
                     </div>
                 </div>
                 <div class="skill-element">
-                    <h3>Javascript/JQery</h3>
+                    <h3>Javascript/JQuery</h3>
                     <div class="progress-container">
-                        <div class="progress" id="js"></div>
+                        <div class="progress progress-stripped" id="js"></div>
                     </div>
                 </div>
                 <div class="skill-element">
                     <h3>Angular JS</h3>
                     <div class="progress-container">
-                        <div class="progress" id="angularjs"></div>
+                        <div class="progress progress-stripped" id="angularjs"></div>
                     </div>
                 </div>
                 <div class="skill-element">
                     <h3>Java</h3>
                     <div class="progress-container">
-                        <div class="progress" id="java"></div>
+                        <div class="progress progress-stripped" id="java"></div>
                     </div>
                 </div>
+            </div>
+            <div class="more-skills">
+                <p class="text-center">I also have a good experience in C#, good knowledge in porgramming languages like C, C++, PHP, J2EE and SQL and good knowledge in using tools like Visual Studio, php myadmin, github and svn.</p>
             </div>
         </div>
     </body>
