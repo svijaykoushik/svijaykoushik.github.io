@@ -111,6 +111,16 @@ i.fa.fa-facebook-official {
     color: #3b5998;
 }
 
+div.vetridam
+{
+	margin-top:10%;
+}
+
+div.vetridam::after
+{
+	content:'';
+}
+
 @keyframes directionDown
 {
 	0%
