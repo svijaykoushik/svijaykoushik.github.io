@@ -69,16 +69,21 @@ a:visted {
     font-size: x-large;
 }
 
+.content h2{
+    font-size:xx-large;
+}
+
 .myslef {
     justify-content: center;
 }
 
 p.samoogam {
     text-align: center;
+    font-size:larger;
 }
 
 p.samoogam a {
-    padding-right: 30px;
+    margin-right: 30px;
 }
 
 i.fa.fa-stack-overflow {
@@ -111,6 +116,10 @@ div.vetridam {
 
 div.vetridam::after {
     content: '';
+}
+
+.skills div.skill-element{
+    margin-top:50px;
 }
 
 div.skill-element h3 {
@@ -149,12 +158,82 @@ div.skill-element h3 {
     width: 90%;
 }
 
-.more-skills{
-	padding-top:20px;
+.more-skills {
+    padding-top: 20px;
 }
 
-.text-center{
-	text-align:center;
+.text-center {
+    text-align: center;
+}
+
+.project-element {
+    padding-top: 30px;
+}
+
+.project-element h3 {
+    font-size: 1em;
+}
+
+.project-element .project-description h4 {
+    font-size: 0.8em;
+}
+
+.project-element .project-links {
+    text-align: right;
+}
+
+.project-element .project-links a {
+    margin-right: 15px;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 900;
+    font-size: large;
+}
+
+.project-element .project-links a:hover{
+    text-decoration:underline;
+}
+
+.project-element .project-links span.seperator {
+    margin-left: 50px;
+    position: relative;
+}
+
+.project-element .project-links .seperator:before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #dadada;
+    top: 18px;
+    left: -45px;
+}
+
+.crimson {
+    color: crimson !important;
+}
+
+.gold {
+    color: gold !important;
+}
+
+.turquoise {
+    color: #357ae8 !important;
+}
+
+.darkgoldenrod {
+    color: darkgoldenrod !important;
+}
+
+footer{
+    margin:0;
+    border-top:2px solid #dadada;
+    font-size:large;
+}
+
+footer i.fa.fa-heart{
+    font-size:55px;
+    color:#8a0707;
 }
 
 @keyframes directionDown {
@@ -230,23 +309,27 @@ div.skill-element h3 {
         transform: scale( .75 );
     }
 }
-@media(min-width:1501px) {
-	.content{
-    max-width: 1080px;
+
+@media(min-width: 1501px) {
+    .content {
+        max-width: 1080px;
     }
 }
+
 @media(min-width: 992px) and (max-width: 1500px) {
-	.content{
-    max-width: 800px;
+    .content {
+        max-width: 800px;
     }
 }
+
 @media(min-width: 768px) and (max-width: 991px) {
-	.content{
-    max-width: 600px;
+    .content {
+        max-width: 600px;
     }
 }
+
 @media(max-width: 767px) {
-	.content{
-    max-width: 600px;
+    .content {
+        max-width: 600px;
     }
 }
