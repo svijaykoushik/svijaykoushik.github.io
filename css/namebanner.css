@@ -189,7 +189,7 @@ div.skill-element h3 {
     font-size: large;
 }
 
-.project-element .project-links a:hover{
+.project-element .project-links a:hover, footer a:hover{
     text-decoration:underline;
 }
 
