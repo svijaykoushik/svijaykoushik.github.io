@@ -27,7 +27,7 @@ a:visted {
 }
 
 .banner .name {
-    font-size: 6em;
+    font-size: 2em;
     font-weight: 800;
     position: absolute;
     text-transform: uppercase;
@@ -36,7 +36,7 @@ a:visted {
 }
 
 .banner .caption {
-    font-size: 3em;
+    font-size: 1em;
     font-weight: 500;
     position: absolute;
     bottom: 40%;
@@ -53,10 +53,10 @@ a:visted {
 
 .direction {
     position: absolute;
-    bottom: 60px;
-    right: 60px;
+    bottom: 20px;
+    right: 20px;
     color: white;
-    font-size: 3em;
+    font-size: 2em;
 }
 
 .content {
@@ -66,11 +66,11 @@ a:visted {
 }
 
 .content div {
-    font-size: x-large;
+    font-size: 16px;
 }
 
-.content h2{
-    font-size:xx-large;
+.content h2 {
+    font-size: xx-large;
 }
 
 .myslef {
@@ -79,11 +79,15 @@ a:visted {
 
 p.samoogam {
     text-align: center;
-    font-size:larger;
+    font-size: 40px;
 }
 
 p.samoogam a {
     margin-right: 30px;
+}
+
+p.samoogam a:hover{
+	text-decoration:none;
 }
 
 i.fa.fa-stack-overflow {
@@ -118,8 +122,8 @@ div.vetridam::after {
     content: '';
 }
 
-.skills div.skill-element{
-    margin-top:50px;
+.skills div.skill-element {
+    margin-top: 50px;
 }
 
 div.skill-element h3 {
@@ -179,23 +183,24 @@ div.skill-element h3 {
 }
 
 .project-element .project-links {
-    text-align: right;
+    text-align: left;
 }
 
 .project-element .project-links a {
     margin-right: 15px;
     font-family: 'Inconsolata', monospace;
     font-weight: 900;
-    font-size: large;
+    font-size: small;
 }
 
-.project-element .project-links a:hover, footer a:hover{
-    text-decoration:underline;
+.project-element .project-links a:hover, footer a:hover {
+    text-decoration: underline;
 }
 
 .project-element .project-links span.seperator {
     margin-left: 50px;
     position: relative;
+	display:none;
 }
 
 .project-element .project-links .seperator:before {
@@ -205,8 +210,8 @@ div.skill-element h3 {
     height: 5px;
     border-radius: 5px;
     background-color: #dadada;
-    top: 18px;
-    left: -45px;
+    top: 12px;
+    left: -36px;
 }
 
 .crimson {
@@ -225,15 +230,15 @@ div.skill-element h3 {
     color: darkgoldenrod !important;
 }
 
-footer{
-    margin:0;
-    border-top:2px solid #dadada;
-    font-size:large;
+footer {
+    margin: 0;
+    border-top: 2px solid #dadada;
+    font-size: 16px;
 }
 
-footer i.fa.fa-heart{
-    font-size:55px;
-    color:#8a0707;
+footer i.fa.fa-heart {
+    font-size: 75px;
+    color: #8a0707;
 }
 
 @keyframes directionDown {
@@ -310,13 +315,13 @@ footer i.fa.fa-heart{
     }
 }
 
-@media(min-width: 1501px) {
+@media(min-width: 1201px) {
     .content {
         max-width: 1080px;
     }
 }
 
-@media(min-width: 992px) and (max-width: 1500px) {
+@media(min-width: 992px) and (max-width: 1200px) {
     .content {
         max-width: 800px;
     }
@@ -330,6 +335,103 @@ footer i.fa.fa-heart{
 
 @media(max-width: 767px) {
     .content {
-        max-width: 600px;
+        max-width: 80%;
+		margin:15px;
     }
+	.instagram-media{
+		margin-left:5px;
+	}
+	div.skill-element h3 {
+		font-size: 18px;
+	}
+
+}
+
+@media (min-width: 768px) {
+	.banner .name{
+		font-size:4em;
+	}
+	
+	.banner .caption{
+		font-size:2em;
+	}
+	
+	.direction{
+		font-size:3em;
+	}
+    
+	p.samoogam {
+        font-size:larger;
+    }
+
+    .project-element .project-links a {
+        margin-left: 7.5px;
+        font-size: medium;
+    }
+
+    footer i.fa.fa-heart {
+        font-size: 55px;
+    }
+
+    .content div {
+        font-size: medium;
+    }
+	.project-element .project-links span.seperator {
+        display:  inline;
+    }
+	
+	.project-element .project-links {
+		text-align: right;
+	}
+	footer{
+		font-size:medium;
+	}
+
+}
+
+@media (min-width: 992px){
+    
+	.banner .name{
+		font-size:6em;
+	}
+	.banner .caption{
+		font-size:3em;
+	}
+	.content div{
+		font-size:larger;
+	}
+	p.samoogam {
+		font-size: xx-large;
+	}
+	.project-element .project-links .seperator:before{
+		top: 28px;
+	}
+	footer{
+		font-size:larger;
+	}
+}
+@media (min-width: 1200px){
+    
+	.banner .name{
+		font-size:8em;
+	}
+	.banner .caption{
+		font-size:4em;
+	}
+	
+	.direction{
+		font-size:4em;
+	}
+	
+	.content div{
+		font-size:x-large;
+	}
+	
+	.project-element .project-links .seperator:before{
+		top: 21px;
+		left: -36px;
+	}
+	footer{
+		font-size:x-large;
+	}
 }
