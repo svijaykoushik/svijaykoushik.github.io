@@ -19,6 +19,7 @@ a:visted {
     width: 100%;
     overflow: hidden;
     animation: backgroundPulse 60s normal infinite;
+    z-index: 5;
 }
 
 .banner .name, .caption {
@@ -86,8 +87,8 @@ p.samoogam a {
     margin-right: 30px;
 }
 
-p.samoogam a:hover{
-	text-decoration:none;
+p.samoogam a:hover {
+    text-decoration: none;
 }
 
 i.fa.fa-stack-overflow {
@@ -200,7 +201,7 @@ div.skill-element h3 {
 .project-element .project-links span.seperator {
     margin-left: 50px;
     position: relative;
-	display:none;
+    display: none;
 }
 
 .project-element .project-links .seperator:before {
@@ -239,6 +240,20 @@ footer {
 footer i.fa.fa-heart {
     font-size: 75px;
     color: #8a0707;
+}
+
+header.logo {
+    display:none;
+}
+
+header img {
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+}
+
+.anime-nav {
+    display:none;
 }
 
 @keyframes directionDown {
@@ -336,32 +351,33 @@ footer i.fa.fa-heart {
 @media(max-width: 767px) {
     .content {
         max-width: 80%;
-		margin:15px;
+        margin: 15px;
     }
-	.instagram-media{
-		margin-left:5px;
-	}
-	div.skill-element h3 {
-		font-size: 18px;
-	}
 
+    .instagram-media {
+        margin-left: 5px;
+    }
+
+    div.skill-element h3 {
+        font-size: 18px;
+    }
 }
 
 @media (min-width: 768px) {
-	.banner .name{
-		font-size:4em;
-	}
-	
-	.banner .caption{
-		font-size:2em;
-	}
-	
-	.direction{
-		font-size:3em;
-	}
-    
-	p.samoogam {
-        font-size:larger;
+    .banner .name {
+        font-size:4em;
+    }
+
+    .banner .caption {
+        font-size: 2em;
+    }
+
+    .direction {
+        font-size: 3em;
+    }
+
+    p.samoogam {
+        font-size: larger;
     }
 
     .project-element .project-links a {
@@ -376,62 +392,119 @@ footer i.fa.fa-heart {
     .content div {
         font-size: medium;
     }
-	.project-element .project-links span.seperator {
-        display:  inline;
+
+    .project-element .project-links span.seperator {
+        display: inline;
     }
-	
-	.project-element .project-links {
-		text-align: right;
-	}
-	footer{
-		font-size:medium;
-	}
 
+    .project-element .project-links {
+        text-align: right;
+    }
+
+    footer {
+        font-size: medium;
+    }
 }
 
-@media (min-width: 992px){
-    
-	.banner .name{
-		font-size:6em;
-	}
-	.banner .caption{
-		font-size:3em;
-	}
-	.content div{
-		font-size:larger;
-	}
-	p.samoogam {
-		font-size: xx-large;
-	}
-	.project-element .project-links .seperator:before{
-		top: 28px;
-	}
-	footer{
-		font-size:larger;
-	}
+@media (min-width: 992px) {
+    .banner .name {
+        font-size:6em;
+    }
+
+    .banner .caption {
+        font-size: 3em;
+    }
+
+    .content div {
+        font-size: larger;
+    }
+
+    p.samoogam {
+        font-size: xx-large;
+    }
+
+    .project-element .project-links .seperator:before {
+        top: 28px;
+    }
+
+    footer {
+        font-size: larger;
+    }
 }
-@media (min-width: 1200px){
-    
-	.banner .name{
-		font-size:8em;
-	}
-	.banner .caption{
-		font-size:4em;
-	}
-	
-	.direction{
-		font-size:4em;
-	}
-	
-	.content div{
-		font-size:x-large;
-	}
-	
-	.project-element .project-links .seperator:before{
-		top: 21px;
-		left: -36px;
-	}
-	footer{
-		font-size:x-large;
-	}
+
+@media (min-width: 1200px) {
+    .banner .name {
+        font-size:8em;
+    }
+
+    .banner .caption {
+        font-size: 3em;
+    }
+
+    .direction {
+        font-size: 4em;
+    }
+
+    .content div {
+        font-size: x-large;
+    }
+
+    .project-element .project-links .seperator:before {
+        top: 21px;
+        left: -36px;
+    }
+
+    footer {
+        font-size: x-large;
+    }
+
+    header.logo {
+        display:block;
+        position: fixed;
+        top: 50px;
+        left: 50px;
+        border-radius: 50%;
+        height: 80px;
+        width: 80px;
+        z-index: 3;
+        pointer-events: none;
+    }
+
+    header img {
+        border-radius: 50%;
+        height: 80px;
+        width: 80px;
+    }
+
+    .anime-nav {
+        position: fixed;
+        top: 50px;
+        left: 50px;
+        display: flex;
+        border-radius: 40px;
+        height: 80px;
+        width: 80px;
+        overflow: hidden;
+        background-color: whitesmoke;
+        z-index: 2;
+        align-items: center;
+        transition: all 0.3s ease;
+        color:#8a0707;
+    }
+
+    .anime-nav:hover {
+        width: 600px;
+    }
+
+    .anime-nav .nav-element {
+        margin-left: 80px;
+        font-weight:bold;
+    }
+    .anime-nav .nav-element:hover{
+        text-decoration:underline;
+    }
+
+    .anime-nav .nav-first {
+        margin-left: 150px !important;
+    }
 }
