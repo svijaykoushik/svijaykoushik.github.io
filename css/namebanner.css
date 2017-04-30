@@ -18,6 +18,7 @@ a:visted {
     height: 100vh;
     width: 100%;
     overflow: hidden;
+    background-color:#272420;
     animation: backgroundPulse 60s normal infinite;
     z-index: 5;
 }
@@ -58,6 +59,7 @@ a:visted {
     right: 20px;
     color: white;
     font-size: 2em;
+    transition:opacity 3s linear;
 }
 
 .content {
@@ -243,7 +245,7 @@ footer i.fa.fa-heart {
 }
 
 header.logo {
-    display:none;
+    display: none;
 }
 
 header img {
@@ -253,7 +255,65 @@ header img {
 }
 
 .anime-nav {
-    display:none;
+    display: none;
+}
+
+.hidden {
+    display: hidden;
+}
+
+.splash-screen-container{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(255,255,255,0.6);
+    z-index:10;
+    display: none;
+    transition:visibility 0.3s ease-out;
+}
+
+.splash-screen-container .splash-screen{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.splash-screen-container .splash-screen img{
+    height:inherit;
+    width:inherit;
+}
+.splash-screen-container .splash-spinner,.splash-screen-container .splash-spinner-rev{
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    border: 5px solid crimson;
+    border-radius:50%;
+    border-top-color: rgba(255,255,255,0.6);
+    border-bottom-color: rgba(255,255,255,0.6);
+    animation:indicator-spin 1s linear infinite;
+    height: 115px;
+    width: 115px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.splash-screen-container .splash-spinner-rev{    
+    height: 155px;
+    width: 155px;
+    border-color:crimson;
+    border-left-color: rgba(255,255,255,0.6);
+    border-right-color: rgba(255,255,255,0.6);
+    animation-duration:3s;
 }
 
 @keyframes directionDown {
@@ -328,6 +388,11 @@ header img {
     100% {
         transform: scale( .75 );
     }
+}
+
+@keyframes indicator-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(359deg); }
 }
 
 @media(min-width: 1201px) {
@@ -459,7 +524,7 @@ header img {
     }
 
     header.logo {
-        display:block;
+        display: block;
         position: fixed;
         top: 50px;
         left: 50px;
@@ -489,7 +554,7 @@ header img {
         z-index: 2;
         align-items: center;
         transition: all 0.3s ease;
-        color:#8a0707;
+        color: #8a0707;
     }
 
     .anime-nav:hover {
@@ -498,10 +563,11 @@ header img {
 
     .anime-nav .nav-element {
         margin-left: 80px;
-        font-weight:bold;
+        font-weight: bold;
     }
-    .anime-nav .nav-element:hover{
-        text-decoration:underline;
+
+    .anime-nav .nav-element:hover {
+        text-decoration: underline;
     }
 
     .anime-nav .nav-first {
