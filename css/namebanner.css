@@ -1,6 +1,7 @@
 body {
     margin: 0;
-    font-family: "Segoe UI"
+    font-family: 'Open Sans', 'Segoe UI', sans-serif;
+	color:black;
 }
 
 a {
