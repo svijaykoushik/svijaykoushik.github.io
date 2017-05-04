@@ -1,4 +1,4 @@
-# Vijaykoushik - UI Design & Full-Stack Developer by hobby
+# Vijaykoushik - Software developer
 This is my personal website and is governed by the following License:
 ## License
 Copyright (C) 2017  Vijaykoushik
