@@ -110,11 +110,15 @@ i.fa.fa-facebook-official {
     color: #3b5998;
 }
 
-i.fa.fa-stack-overflow, i.fa.fa-linkedin-square, i.fa.fa-google-plus-official, i.fa.fa-facebook-official, i.fa.fa-instagram, i.fa.fa-github {
+i.fa.fa-envelope{
+    color:#205baa;
+}
+
+i.fa.fa-stack-overflow, i.fa.fa-linkedin-square, i.fa.fa-google-plus-official, i.fa.fa-facebook-official, i.fa.fa-instagram, i.fa.fa-github, i.fa.fa-envelope {
     transition: .2s all ease-out;
 }
 
-i.fa.fa-stack-overflow:hover, i.fa.fa-linkedin-square:hover, i.fa.fa-google-plus-official:hover, i.fa.fa-facebook-official:hover, i.fa.fa-instagram:hover, i.fa.fa-github:hover {
+i.fa.fa-stack-overflow:hover, i.fa.fa-linkedin-square:hover, i.fa.fa-google-plus-official:hover, i.fa.fa-facebook-official:hover, i.fa.fa-instagram:hover, i.fa.fa-github:hover, i.fa.fa-envelope:hover {
     transform: scale(2.5);
 }
 

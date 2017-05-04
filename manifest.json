@@ -49,5 +49,10 @@
     ],
     "theme_color": "#f5f5f5",
     "background_color": "#f5f5f5",
-    "display": "standalone"
+    "display": "standalone",
+	"short_name": "Vijay Koushik",
+	"start_url": ".",
+	"description": "A developer by hobby, passionate in User Interface and User Experience designing.",
+	"orientation": "portrait-primary",
+	"lang": "en-IN"
 }
