@@ -4,6 +4,7 @@ CACHE MANIFEST
 # Explicitly cached 'master entries'.
 CACHE:
 index.html
-js/main.js
+js/app.js
 js/phaser.min.js
 js/VirtualFireworks.js
+https://fonts.googleapis.com/css?family=Courgette
