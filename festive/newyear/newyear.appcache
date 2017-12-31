@@ -1,0 +1,9 @@
+CACHE MANIFEST
+# 2017-12-31:v1
+
+# Explicitly cached 'master entries'.
+CACHE:
+index.html
+js/main.js
+js/phaser.min.js
+js/VirtualFireworks.js
