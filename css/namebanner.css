@@ -43,6 +43,7 @@ a:visted {
     background-color:#272420;
     animation: backgroundPulse 60s normal infinite;
     z-index: 5;
+    box-shadow: 0 12px 16px 1px rgba(0, 0, 0, 0.3), 0 24px 20px 4px rgba(0, 0, 0, 0.2);
 }
 
 .banner .name, .caption {
@@ -346,6 +347,10 @@ header img {
     border-right-color: rgba(255,255,255,0.6);
     animation-duration:3s;
 }
+/*for instagram card embed*/
+iframe {
+    box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.3), 0 2px 6px 1px rgba(0, 0, 0, 0.2) !important;
+}
 
 @keyframes directionDown {
     0% {
@@ -586,6 +591,7 @@ header img {
         align-items: center;
         transition: all 0.3s ease;
         color: #8a0707;
+        box-shadow: 0 4px 8px 1px rgba(0,0,0,0.3), 0 8px 10px rgba(0,0,0,0.2);
     }
 
     .anime-nav:hover {
