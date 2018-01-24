@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Smash- play Online</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Smash is a fun filled, online adaptation of the classic brick breaking game Breakout.">
+        <meta name="keywords" content="HTML5 game,Smash,Phaser game,JavaScript game">
+        <meta name="author" content="Vijaykoushik S">       
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:image" content="/assets/pc/logo.png">
+        <meta property="og:description" content="Smash is a fun filled, online adaptation of the classic brick breaking game Breakout.">
+        <meta property="og:title" content="Smash">
+        <meta name="twitter:title" content="Smash" />
+        <meta name="twitter:description" content="Smash is a fun filled, online adaptation of the classic brick breaking game Breakout." />
+        <meta name="twitter:image" content="/assets/pc/logo.png" />
+		<meta name="google-site-verification" content="mhd6MlbydXT7Gl524E0vQuvzfAEbkwphmNjN_AfI0EM" />
+		<meta name="msvalidate.01" content="A953EBBC10969DE86619DB2BD101AC17" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+		<!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/d902360c6f.css">
+        <style>
+            html{
+                font-family: 'Lato', sans-serif;
+            }
+            .main-loader {
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: white;
+                background-color: rgba(255, 255, 255, 0.5);
+                z-index: 500;
+            }
+
+        </style>
+    </head>
+    <body class="grey lighten-5">
+        <div id="preLoader" class="main-loader">
+            <div class="preloader-wrapper big active">
+              <div class="spinner-layer spinner-blue-only">
+                <div class="circle-clipper left">
+                  <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                  <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                  <div class="circle"></div>
+                </div>
+              </div>
+            </div>
+        </div>
+          
+        <div class="navbar-fixed">
+            <nav>
+              <div class="nav-wrapper  blue darken-2">
+                <a href="#!" class="brand-logo">SMASH</a>
+              </div>
+            </nav>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="offset-s12"></div>
+            </div>
+            <div class="row">
+                <div class="col l4 m4 s4">
+                    <img src="./assets/pc/logo.png"/ class="responsive-img">
+                </div>
+                <div class="col l8 m8 s8">
+                    <div class="row">
+                        <div class="col s12">
+                            <h1>SMASH<sub>(Alpha)</sub></h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <span class="flow-text">Vijay Koushik</span>
+                        </div>
+                    </div>
+                    <div class="col s12">
+                        <a class="waves-effect waves-light btn blue darken-1" href="./smash_game.html">Play</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col l6 s12">
+                    <div class="row">
+                        <div class="col s12">
+                            <h2>Description</h2>
+                            <p class="flow-text">
+                                    Smash is a fun filled, online adaptation of the classic brick breaking game "Breakout".
+                                    Break the bricks using the ball to clear the level.
+                                    Play online with only your browser on any device. have fun! <i class="fa  fa-smile-o"></i>. 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <h3>Available on</h3>
+                            <div class="row text-center">
+                                <div class="col s4">
+                                    <i class="fa fa-desktop fa-2x"></i>
+                                </div>
+                                <div class="col s4">
+                                    <i class="fa fa-tablet fa-2x"></i>
+                                </div>
+                                <div class="col s4">
+                                    <i class="fa fa-mobile-phone fa-2x"></i>
+                                </div>
+                            </div>
+                            <div class="row text-center flow-text">
+                                <div class="col s4">
+                                    <span>PC</span>
+                                </div>
+                                <div class="col s4">
+                                    <span> Tablet</span>
+                                </div>
+                                <div class="col s4">
+                                    <span>Mobile</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col l6  m12  s12">
+                    <h2>Screenshots</h2>
+                        <div class="slider">
+                            <ul class="slides">
+                                <li><img src="./s_s/Screenshot_20180124-1040.png"></li>
+                                <li><img src="./s_s/Screenshot_20180124-1041.png"></li>
+                                <li><img src="./s_s/Screenshot_20180124-1042.png"></li>
+                                <li><img src="./s_s/Screenshot_20180124-1043.png"></li>
+                                <li><img src="./s_s/Screenshot_20180124-1044.png"></li>
+                                <li><img src="./s_s/Screenshot_20180124-1045.png"></li>
+                                <li><img src="./s_s/Screenshot_20180124-1046.png"></li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <h2>Game requirements</h2>
+                    <div class="row flow-text">
+                        <div class="col l6 m6 s12">
+                            <table class="bordered">
+                                <tr>
+                                    <th>Minimum</th>
+                                </tr>
+                                <tr>
+                                    <td>OS</td>
+                                    <td>Neutral</td>
+                                </tr>
+                                <tr>
+                                    <td>Architecture</td>
+                                    <td>Neutral</td>
+                                </tr>
+                                <tr>
+                                    <td>Browser</td>
+                                    <td>
+                                            <i class="fa fa-internet-explorer"></i> IE 9 | <i class="fa fa-chrome"></i> Chrome 49 | <i class="fa fa-firefox"></i> Firefox 55 | <i class="fa fa-safari"></i> Safari 10.1 | <i class="fa fa-opera"></i> Opera 47 | <i class="fa fa-safari"></i>  <i class="fa fa-mobile-phone"></i> Safari Mobile 10.2 | <i class="fa fa-android"></i> Android browser 4.4 | <i class="fa fa-chrome"></i> <i class="fa fa-mobile-phone"></i> Chrome mobile 61
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col l6 m6 s12">
+                            <table class="bordered flow-text">
+                                <tr>
+                                    <th>Recomended</th>
+                                </tr>
+                                <tr>
+                                    <td>OS</td>
+                                    <td>Neutral</td>
+                                </tr>
+                                <tr>
+                                    <td>Architecture</td>
+                                    <td>Neutral</td>
+                                </tr>
+                                <tr>
+                                    <td>Browser</td>
+                                    <td><i class="fa fa-internet-explorer"></i> IE 11 | <i class="fa fa-edge"></i> Edge 16 | <i class="fa fa-chrome"></i> Chrome 62 | <i class="fa fa-firefox"></i> Firefox 56 |<i class="fa fa-safari"></i> Safari 11 | <i class="fa fa-opera"></i> Opera 48 | <i class="fa fa-safari"></i>  <i class="fa fa-mobile-phone"></i> Safari Mobile 11 | <i class="fa fa-android"></i> Android browser 56 | <i class="fa fa-chrome"></i>  <i class="fa fa-mobile-phone"></i> Chrome mobile 61 | <i class="fa fa-edge"></i>  <i class="fa fa-mobile-phone"></i> Edge for mobile 15
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row flow-text">
+                <div class="col s12">
+                    <h2>Additional Info</h2>
+                    <div class="row">                        
+                        <div class="col s6">
+                            <p>
+                                <b>Publisher</b>
+                                <br/>
+                                Vijay Koushik
+                            </p>
+                        </div>                        
+                        <div class="col s6">
+                            <p>
+                                <b>Publisher info</b>
+                                <br/>
+                                <a href="svijaykoushik.github.io">Publisher Website</a>
+                                <br/>
+                                <a href="mailto:svijaykoushik@hotmail.com?Subject=Hello%20Vijay,%20We%20need%20to%20talk%20about%20the%20game%20Smash">Publisher support</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">                        
+                        <div class="col s6">
+                            <p>
+                                <b>Category</b>
+                                <br/>
+                                Leisure & Arcade
+                            </p>
+                        </div>                        
+                        <div class="col s6">
+                            <p>
+                                <b>Language Supported</b>
+                                <br/>
+                                English (United Kingdom)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="page-footer  blue darken-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col m4 s12">
+                        <h5 class="white-text">Help SMASH become better</h5>
+                        <p>
+                            I hope you liked Smash. If you think that it needs improvement or if you faced any difficulties, you can leave a comment on my facebook page.
+                        </p>
+                        <a class="waves-effect waves-light btn blue darken-1" href="https://www.facebook.com/svijaykoushik/">Leave a feedback</a>
+                    </div>
+                    <div class="col m4 s12">
+                        <h5 class="white-text">Support SMASH</h5>
+                        <p>
+                            Support SMASH by sharing it on social media
+                                <div class="fb-share-button"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u&amp;src=sdkpreparse">Share</a></div>
+                                <div>
+                                        <a class="twitter-share-button" data-size="large"
+                                        href="https://twitter.com/intent/tweet?text=Hey+checkout+%22SMASH%22++-+an+all+new+HTML5+game&url=https%3A%2F%2Fsvijaykoushik.github.io%2Fgames%2Fsmash&via=vijaykoushiks&hashtags=smashonline">
+                                      Tweet</a>
+                                </div>
+                        </p>
+                    </div>
+                    <div class="col m4 s12">
+                        <h5 class="white-text">Special Thanks to</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="http://incompetech.com/music/royalty-free/music.html">incompetech.com</a></li>
+                            <li><a class="grey-text text-lighten-3" href="http://phaser.io/">Phaser.io</a></li>
+                            <li><a class="grey-text text-lighten-3" href="https://freesound.org/">freesound.org</a></li>
+                            <li><a class="grey-text text-lighten-3" href="https://github.com/MattMcFarland/phaser-menu-system">MattMcFarland @ github.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright  blue darken-3">
+                <div class="container">
+                    &copy; 2018 svijaykoushik
+                </div>
+            </div>
+        </footer>
+        <!-- Javascript dependencies -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=1648491295446196&autoLogAppEvents=1';
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+        <script>
+            $(document).ready(function(){
+                $('#preLoader').addClass('hide');
+                $('.slider').slider();
+            });
+        </script>
+    </body>
+</html>
