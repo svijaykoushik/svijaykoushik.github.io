@@ -1,7 +1,10 @@
-# Vijaykoushik - Software developer
+# Vijaykoushik, S. - Software developer
+
 This is my personal website and is governed by the following License:
+
 ## License
-Copyright (C) 2017  Vijaykoushik
+
+Copyright (C) 2017, 2018  Vijaykoushik, S.
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
