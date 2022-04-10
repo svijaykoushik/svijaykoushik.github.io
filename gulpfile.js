@@ -17,19 +17,19 @@ gulp.task('webServer', function () {
         }));
 });
 
-gulp.task('clean-css', function(){
+gulp.task('clean-css', function () {
     return clean(['css/namebanner.min.css']);
 });
 
-gulp.task('clean-js', function(){
+gulp.task('clean-js', function () {
     return clean(['js/app.min.js']);
 });
 
 gulp.task('pack-js', /*['clean-js'],*/ function () {
     return gulp.src(["build/js/app.js"])
         .pipe(minify({
-            ext:{
-                min:'.js'
+            ext: {
+                min: '.js'
             },
             noSource: true
         }))
@@ -45,15 +45,15 @@ gulp.task('pack-css', /*['clean-css'],*/ function () {
         .pipe(gulp.dest('css/'))
 });
 
-gulp.task('link-checker',function(){
+gulp.task('link-checker', function () {
     crawler("https://svijaykoushik.github.io")
-    .on('fetch404',function(queueItem, response){
-        log.error("Resource not found at "+ queueItem.url + " from " + queueItem.referer);
-        log.info("Response code: "+ response.statusCode);
-    })
-    .on('complete', function(queueItem){
-       log("NO broken links in " + queueItem.referer);
-    })
+        .on('fetch404', function (queueItem, response) {
+            log.error("Resource not found at " + queueItem.url + " from " + queueItem.referer);
+            log.info("Response code: " + response.statusCode);
+        })
+        .on('complete', function (queueItem) {
+            log("NO broken links in " + queueItem.referer);
+        })
 });
 
-gulp.task('defaultBuildTask', ['pack-js', 'pack-css']);
+gulp.task('defaultBuildTask', gulp.parallel('pack-js', 'pack-css'));
