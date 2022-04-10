@@ -4,7 +4,9 @@
   "description": "This is my personal website",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp defaultBuildTask",
+    "check-links": "gulp link-checker",
+    "serve": "gulp webServer"
   },
   "repository": {
     "type": "git",
@@ -17,16 +19,16 @@
   },
   "homepage": "https://github.com/svijaykoushik/svijaykoushik.github.io#readme",
   "devDependencies": {
-    "del": "^3.0.0",
-    "fancy-log": "^1.3.3",
-    "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.9.4",
+    "del": "^6.0.0",
+    "fancy-log": "^2.0.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
-    "gulp-inject": "^4.3.2",
+    "gulp-inject": "^5.0.5",
     "gulp-minify": "^3.1.0",
-    "gulp-rename": "^1.4.0",
-    "gulp-rev": "^8.1.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-rev": "^9.0.0",
     "gulp-webserver": "^0.9.1",
-    "simplecrawler": "^1.1.6"
+    "simplecrawler": "^1.1.9"
   }
 }
