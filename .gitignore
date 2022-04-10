@@ -1,7 +1,3 @@
 #Project Directories
 .vscode/*
 node_modules/*
-
-#Project Files
-gulpfile.js
-package.json
