@@ -1,319 +1,606 @@
-<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Vijay Koushik</title>
+    <meta charset="utf-8"/>
+    <meta name="description" content="A developer by hobby, passionate in User Interface and User Experience designing."/>
+    <meta name="keywords" content="Vijay Koushik, developer, hobby, passionate, User Interface designing, User Experience designing"/>
+    <meta charset="UTF-8"/>
+    <meta name="robots" content="index, follow"/>
+    <meta name="author" content="Vijay Koushik"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta property="og:image" content="https://svijaykoushik.github.io/og-image.jpg"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:image:width" content="1418"/>
+    <meta property="og:image:height" content="742"/>
+    <meta property="og:description" content="A developer by hobby, passionate in User Interface and User Experience designing."/>
+    <meta property="og:title" content="Vijay Koushik" />
+    <meta property="og:url" content="https://svijaykoushik.github.io" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Vijay Koushik" />
+    <meta name="twitter:description" content="A developer by hobby, passionate in User Interface and User Experience designing." />
+    <meta name="twitter:image" content="https://svijaykoushik.github.io/og-image.jpg" />
+    <meta name="google-site-verification" content="mhd6MlbydXT7Gl524E0vQuvzfAEbkwphmNjN_AfI0EM" />
+    <meta name="msvalidate.01" content="A953EBBC10969DE86619DB2BD101AC17" />
+    <meta name="apple-mobile-web-app-title" content="Vijay Koushik"/>
+    <meta name="application-name" content="Vijay Koushik"/>
+    <meta name="msapplication-TileColor" content="#f5f5f5"/>
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png?v=NmE7ydPav7"/>
+    <meta name="theme-color" content="#f5f5f5">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=NmE7ydPav7">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=NmE7ydPav7">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png?v=NmE7ydPav7">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=NmE7ydPav7">
+    <link rel="manifest" href="/manifest.json?v=NmE7ydPav7">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=NmE7ydPav7" color="#6f1b28">
+    <link rel="shortcut icon" href="/favicon.ico?v=NmE7ydPav7">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-	svijaykoushik.github.io
-	This is my personal website
-	Copyright (C) 2017  Vijaykoushik
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            overflow-x: hidden;
+            position: relative;
+            overflow-y: auto; /* Ensure the page is scrollable */
+        }
 
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            position: relative;
+            z-index: 10;
+            padding: 1rem 0;
+        }
 
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+        header::before {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            background: rgba(187, 222, 251, 0.5);
+            border-radius: 50% 50% 0 0;
+        }
 
--->
-<!doctype html>
-<html>
-    <head>
-        <title>Vijay Koushik</title>
-        <meta charset="utf-8"/>
-        <meta name="description" content="A developer by hobby, passionate in User Interface and User Experience designing."/>
-        <meta name="keywords" content="Vijay Koushik, developer, hobby, passionate, User Interface designing, User Experience designing"/>
-        <meta charset="UTF-8"/>
-        <meta name="robots" content="index, follow"/>
-        <meta name="author" content="Vijay Koushik"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <meta property="og:image" content="https://svijaykoushik.github.io/og-image.jpg"/>
-		<meta property="og:type" content="website" />
-        <meta property="og:image:width" content="1418"/>
-        <meta property="og:image:height" content="742"/>
-        <meta property="og:description" content="A developer by hobby, passionate in User Interface and User Experience designing."/>
-        <meta property="og:title" content="Vijay Koushik" />
-        <meta property="og:url" content="https://svijaykoushik.github.io" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Vijay Koushik" />
-        <meta name="twitter:description" content="A developer by hobby, passionate in User Interface and User Experience designing." />
-        <meta name="twitter:image" content="https://svijaykoushik.github.io/og-image.jpg" />
-		<meta name="google-site-verification" content="mhd6MlbydXT7Gl524E0vQuvzfAEbkwphmNjN_AfI0EM" />
-		<meta name="msvalidate.01" content="A953EBBC10969DE86619DB2BD101AC17" />
-        <meta name="apple-mobile-web-app-title" content="Vijay Koushik"/>
-        <meta name="application-name" content="Vijay Koushik"/>
-        <meta name="msapplication-TileColor" content="#f5f5f5"/>
-        <meta name="msapplication-TileImage" content="/mstile-144x144.png?v=NmE7ydPav7"/>
-        <meta name="theme-color" content="#f5f5f5">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=NmE7ydPav7">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=NmE7ydPav7">
-        <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png?v=NmE7ydPav7">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=NmE7ydPav7">
-        <link rel="manifest" href="/manifest.json?v=NmE7ydPav7">
-        <link rel="mask-icon" href="/safari-pinned-tab.svg?v=NmE7ydPav7" color="#6f1b28">
-        <link rel="shortcut icon" href="/favicon.ico?v=NmE7ydPav7">
-        <link rel="stylesheet" href="css/namebanner.min.css" type="text/css">
-        <script src="js/app.js"></script>
-        <link rel="stylesheet" href="https://use.fontawesome.com/d902360c6f.css">
-        <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
-    </head>
-    <body>
-        <div class="banner" itemscope itemtype="http://schema.org/Person">
-            <div class="name" itemprop="name">Vijay Koushik, S.</div>
-            <div class="caption hidden"></div>
-            <div class="caption" itemprop="jobTitle">
-                I <i class="fa fa-heart pulseElement"></i>
-                &nbsp;to code | Software Developer
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-placeholder {
+            width: 40px;
+            height: 40px;
+            background: #1e88e5;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            color: #1e88e5;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-links li a {
+            color: #1e88e5;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #1e88e5;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            color: #1565c0;
+        }
+
+        .nav-links li a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        #hero {
+            text-align: center;
+            padding: 5rem 0;
+            position: relative;
+        }
+
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            z-index: -1;
+            border-radius: 0 0 50% 50%;
+        }
+
+        #hero h2 {
+            font-size: 3rem;
+            color: #1e88e5;
+            margin-bottom: 1rem;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        #hero p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .btn {
+            background: #1e88e5;
+            color: #fff;
+            padding: 0.7rem 1.5rem;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(30, 136, 229, 0.5);
+        }
+
+        /* About Section */
+        #about {
+            padding: 3rem 0;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            margin: 2rem auto;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        #about h2 {
+            font-size: 2.5rem;
+            color: #1e88e5;
+            margin-bottom: 1rem;
+        }
+
+        #about p {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* Projects Section */
+        #projects {
+            padding: 3rem 0;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            margin: 2rem auto;
+            max-width: 800px; /* Allow full width */
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* Only one column */
+            gap: 2rem;
+        }
+
+        #projects h2 {
+             font-size: 2.5rem;
+             color: #1e88e5;
+             margin-bottom: 2rem;
+         }
+
+        .project {
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .project img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        .project h3 {
+            margin: 1rem;
+            font-size: 1.5rem;
+            color: #1e88e5;
+        }
+
+        .project p {
+            margin: 0 1rem 1rem;
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* Skills Section */
+        #skills {
+            padding: 3rem 0;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            margin: 2rem auto;
+            max-width: 800px;
+        }
+
+        #skills h2 {
+            font-size: 2.5rem;
+            color: #1e88e5;
+            margin-bottom: 2rem;
+        }
+
+        .skills-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .skills-list li {
+            background: rgba(30, 136, 229, 0.2);
+            color: #1e88e5;
+            padding: 0.5rem 1rem;
+            border-radius: 15px;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skills-list li i {
+            font-size: 1.2rem;
+        }
+
+        .skills-list li:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Contact Section */
+        #contact {
+            padding: 3rem 0;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            margin: 2rem auto;
+            max-width: 800px;
+        }
+
+        #contact h2 {
+            font-size: 2.5rem;
+            color: #1e88e5;
+            margin-bottom: 2rem;
+        }
+
+        #contact form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        #contact input, #contact textarea {
+            width: 100%;
+            max-width: 500px;
+            padding: 0.7rem;
+            border: 1px solid #bbdefb;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            font-size: 1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #contact input:focus, #contact textarea:focus {
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        #contact textarea {
+            resize: none;
+            height: 150px;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            color: #666;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+            border-radius: 20px;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            #hero h2 {
+                font-size: 2rem;
+            }
+
+            #hero p {
+                font-size: 1rem;
+            }
+
+            #about h2, #projects h2, #skills h2, #contact h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Particle Animation */
+        canvas.particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Particle Canvas -->
+<canvas class="particles"></canvas>
+
+<!-- Header Section -->
+<header id="header">
+    <div class="container">
+        <nav>
+            <div style="display: flex; align-items: center;">
+                <div class="logo-placeholder"></div>
+                <h1>Vijay Koushik</h1>
             </div>
-            <div class="direction direction-down">
-                <a href="#about" data-scroll>
-                    <i class="fa fa-arrow-circle-down"></i>
-                </a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section id="hero">
+    <div class="container">
+        <h2>Hi, I'm Vijay Koushik</h2>
+        <p>I build scalable, reliable, and innovative web applications—one line of code at a time.</p>
+        <a href="#contact" class="btn">Get in Touch</a>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about">
+    <div class="container">
+        <h2>About Me</h2>
+        <p>I'm a passionate full-stack developer at Blaze, based in Madurai, Tamil Nadu, India, with over five years of experience crafting scalable and reliable web applications. JavaScript and web technologies are my playground—I thrive on solving complex problems, optimizing performance, and bringing innovative ideas to life.</p>
+        <p>Technology is always evolving, and so am I. I believe in continuous learning and staying ahead of the curve to build modern, efficient, and user-friendly applications. Whether it's architecting robust backend systems or refining seamless front-end experiences, I'm always up for the challenge.</p>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects">
+    <div class="container">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project">
+                <img src="project3.jpg" alt="Project 3">
+                <h3>express-api-ts-boilerplate</h3>
+                <p>I built <b>express-api-ts-boilerplate</b> to make API development seamless, secure, and scalable with <b>Express.js</b> and <b>TypeScript</b>. Packed with <b>OAuth 2.0 authentication</b>, database flexibility, and built-in testing tools, it’s production-ready and powering real-world applications—so you can focus on building, not boilerplate! 🚀</p>
+            </div>
+            <div class="project">
+                <img src="project1.jpg" alt="Project 1">
+                <h3>ChronoChime</h3>
+                <p>I built <b>ChronoChime</b>, a sleek and intuitive desktop app powered by <b>Electron.js</b>, to keep you organized with <b>hourly notifications</b> and a soothing chime. Stay productive effortlessly—set it up in seconds and let time work for you! 🚀</p>
+            </div>
+            <div class="project">
+                <img src="project2.jpg" alt="Project 2">
+                <h3>ByteBroom</h3>
+                <p>I created <b>ByteBroom</b>, a blazing-fast, open-source duplicate file finder that makes decluttering effortless. With lightning-fast scans, one-click cleanup, and smart safety features, it helps you reclaim storage and stay organized—because your files deserve better! 🧹✨</p>
             </div>
         </div>
-        <div class="content">
-            <header class="logo">
-                <img src="logo.png"/>
-            </header>
-            <div class="anime-nav">
-                <a class="nav-element nav-first" href="#about">About</a>
-                <a class="nav-element" href="#skills">Skills</a>
-                <a class="nav-element" href="#projects">Projects</a>
-            </div>
-            <h2>
-                <a name="about">About</a>
-            </h2>
-            <div class="myself">
-                <p>
-                    A developer by hobby, passionate in User Interface and User Experience designing with a Professional experience of 1 year in UI development and OpenText's Cordys. I love to create programs because, it's fun!&nbsp;<i class="fa fa-smile-o"></i>
-                    . I also love to learn new methods and technologies that make UI/UX designing better.
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                </p>
-                <p class="samoogam">
-                    <a href="mailto:svijaykoushik@hotmail.com?Subject=Hello%20Vijay,%20We%20need%20to%20talk" title="E-mail">
-                        <i class="fa fa-envelope"></i>
-                    </a>
-					<a href="https://svijaykoushik.github.io/blog" title="Blog">
-						<i class="fa  fa-pencil-square-o"></i>
-					</a>
-                    <a href="https://www.facebook.com/svijaykoushik" title="Facebook">
-                        <i class="fa fa-facebook-official"></i>
-                    </a>
-                    <a href="https://www.instagram.com/svijaykoushik" title="Instagram">
-                        <i class="fa fa-instagram"></i>
-                    </a>
-                    <a href="https://github.com/svijaykoushik" title="Github">
-                        <i class="fa fa-github"></i>
-                    </a>
-                    <a href="https://plus.google.com/+VijayKoushik_aka_moon01man" title="Google Plus">
-                        <i class="fa fa-google-plus-official"></i>
-                    </a>
-                    <a href="http://stackoverflow.com/users/3207831/vj-koushik" title="Stackoverflow">
-                        <i class="fa fa-stack-overflow"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/vijay-koushik-82534963/" title="Linkedin">
-                        <i class="fa fa-linkedin-square"></i>
-                    </a>
-                </p>
-                <div class="vetridam"></div>
-                <p>I like to take photos too..</p>
-                <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.3), 0 2px 6px 1px rgba(0, 0, 0, 0.2); max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
-                    <div style="padding:8px;">
-                        <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;">
-                            <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div>
-                        </div>
-                        <p style=" margin:8px 0 0 0; padding:0 4px;">
-                            <a href="https://www.instagram.com/p/BQXg_BkjhC7/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Sunrise 🌄. #cityscape #nature</a>
-                        </p>
-                        <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
-                            A post shared by Vijay Koushik (@svijaykoushik) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2017-02-11T10:09:19+00:00">Feb 11, 2017 at 2:09am PST</time>
-                        </p>
-                    </div>
-                </blockquote>
-                <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
-            </div>
-            <div class="vetridam"></div>
-            <h2>
-                <a name="skills">Skills</a>
-            </h2>
-            <div class="skills">
-                <div class="skill-element">
-                    <h3>HTML/CSS</h3>
-                    <div class="progress-container">
-                        <div class="progress progress-stripped" id="html"></div>
-                    </div>
-                </div>
-                <div class="skill-element">
-                    <h3>Javascript/JQuery</h3>
-                    <div class="progress-container">
-                        <div class="progress progress-stripped" id="js"></div>
-                    </div>
-                </div>
-                <div class="skill-element">
-                    <h3>Angular JS</h3>
-                    <div class="progress-container">
-                        <div class="progress progress-stripped" id="angularjs"></div>
-                    </div>
-                </div>
-                <div class="skill-element">
-                    <h3>Java</h3>
-                    <div class="progress-container">
-                        <div class="progress progress-stripped" id="java"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="more-skills">
-                <p class="text-center">I also have a good experience in C#, good knowledge in porgramming languages like C, C++, PHP, J2EE and SQL and good knowledge in using tools like Visual Studio, php myadmin, github and svn.</p>
-            </div>
-            <div class="vetridam"></div>
-            <h2>
-                <a name="projects">Projects</a>
-            </h2>
-            <div class="projects">
-                <div class="project-element">
-                    <h3>Clock Alert</h3>
-                    <div class="project-description">
-                        <h4>A Clock that chimes every hour</h4>
-                        <p>Clock alert is a windows application. The application sits in the system tray and chimes every hour to help computer users and prevent them to loose track of time when working/playing in it.</p>
-                    </div>
-                    <div class="project-links">
-                        <p>
-                            <a href="https://sites.google.com/site/clockalertapp/" class="crimson">View project</a>
-                            <span class="seperator"></span>
-                            <a href="https://sourceforge.net/projects/clockalert/" class="darkgoldenrod">Sourceforge</a>
-                            <span class="seperator"></span>
-                            <a href="https://www.facebook.com/clockalert/" class="turquoise">Facebook</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="project-element">
-                    <h3>Turnoff Display</h3>
-                    <div class="project-description">
-                        <h4>A quick way to turn off your display</h4>
-                        <p>Turnoff display is also a windows application that helps users of devices with integrated display like laptops to turnoff their display to save power.</p>
-                    </div>
-                    <div class="project-links">
-                        <p>
-                            <a href="https://turnoffdisplay.sourceforge.io/" class="crimson">View project</a>
-                            <span class="seperator"></span>
-                            <a href="https://sourceforge.net/projects/turnoffdisplay/" class="turquoise">Sourceforge</a>
-                        </p>
-                    </div>
-                </div>
-                <!--<div class="project-element">
-                    <h3>HTML/CSS</h3>
-                    <div class="project-description"></div>
-                    <div class="project-links"></div>
-                </div>
-                <div class="project-element">
-                    <h3>HTML/CSS</h3>
-                    <div class="project-description"></div>
-                    <div class="project-links"></div>
-                </div>-->
-            </div>
-        </div>
-        <footer>
-            <p class="text-center">
-                <i class="fa fa-heart pulseElement"></i>
-            </p>
-            <p class="text-center">Designed and developed by VijayKoushik.</p>
-            <p class="text-center">
-                This webpage is hosted in Github Pages and the code is available on <a href="https://github.com/svijaykoushik/svijaykoushik.github.io" class="turquoise">Github</a>
-                .
-            
-            
-            
-            
-            </p>
-            <p class="text-center">
-                Inspired by <a href="http://praneshravi.in/" class="crimson">this site</a>
-                which is also on <a href="https://github.com/svijaykoushik/svijaykoushik.github.io" class="turquoise">Github</a>
-                .
-            
-            
-            
-            
-            </p>
-            <p class="samoogam">
-                <a href="mailto:svijaykoushik@hotmail.com?Subject=Hello%20Vijay,%20We%20need%20to%20talk" title="E-mail">
-                    <i class="fa fa-envelope"></i>
-                </a>
-				<a href="https://svijaykoushik.github.io/blog" title="Blog">
-					<i class="fa  fa-pencil-square-o"></i>
-				</a>
-                <a href="https://www.facebook.com/svijaykoushik" title="Facebook">
-                    <i class="fa fa-facebook-official"></i>
-                </a>
-                <a href="https://www.instagram.com/svijaykoushik" title="Instagram">
-                    <i class="fa fa-instagram"></i>
-                </a>
-                <a href="https://github.com/svijaykoushik" title="Github">
-                    <i class="fa fa-github"></i>
-                </a>
-                <a href="https://plus.google.com/+VijayKoushik_aka_moon01man" title="Google Plus">
-                    <i class="fa fa-google-plus-official"></i>
-                </a>
-                <a href="http://stackoverflow.com/users/3207831/vj-koushik" title="Stackoverflow">
-                    <i class="fa fa-stack-overflow"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/vijay-koushik-82534963/" title="Linkedin">
-                    <i class="fa fa-linkedin-square"></i>
-                </a>
-            </p>
-        </footer>
-        <div id="splashScreen" class="splash-screen-container">
-            <div class="splash-screen">
-                <img src="logo.png"/>
-            </div>
-            <div class="splash-spinner"></div>
-            <div class="splash-spinner-rev"></div>
-        </div>
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script src="js/smoothscroll.js"></script>
-        <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    </div>
+</section>
 
-  ga('create', 'UA-50702630-4', 'auto');
-  ga('send', 'pageview');
+<!-- Skills Section -->
+<section id="skills">
+    <div class="container">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            <li><i class="fab fa-react"></i> React</li>
+            <li><i class="fab fa-node"></i> Node.js</li>
+            <li><i class="fas fa-database"></i> SQL</li>
+            <li><i class="fab fa-git-alt"></i> Git</li>
+            <li><i class="fab fa-angular"></i> Angular</li>
+            <li><i class="fab fa-html5"></i> HTML5</li>
+            <li><i class="fab fa-css3-alt"></i> CSS3</li>
+            <li><i class="fab fa-js"></i> JavaScript</li>
+            <li><i class="fab fa-docker"></i> Docker</li>
+        </ul>
+    </div>
+</section>
 
+<!-- Contact Section -->
+<section id="contact">
+    <div class="container">
+        <h2>Contact Me</h2>
+        <form action="#" method="POST">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    // Particle Animation Script
+    const canvas = document.querySelector('.particles');
+    const ctx = canvas.getContext('2d');
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    });
+
+    const particlesArray = [];
+    const numberOfParticles = 50;
+
+    class Particle {
+        constructor() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.size = Math.random() * 3 + 1;
+            this.speedX = Math.random() * 0.4 - 0.2;
+            this.speedY = Math.random() * 0.4 - 0.2;
+            this.opacity = Math.random() * 0.5 + 0.1;
+        }
+
+        update() {
+            this.x += this.speedX;
+            this.y += this.speedY;
+
+            if (this.size > 0.2) this.size -= 0.01;
+
+            if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+            if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+        }
+
+        draw() {
+            ctx.fillStyle = `rgba(30, 136, 229, ${this.opacity})`;
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fill();
+        }
+    }
+
+    function init() {
+        for (let i = 0; i < numberOfParticles; i++) {
+            particlesArray.push(new Particle());
+        }
+    }
+
+    function handleParticles() {
+        for (let i = 0; i < particlesArray.length; i++) {
+            particlesArray[i].update();
+            particlesArray[i].draw();
+
+            if (particlesArray[i].size <= 0.2) {
+                particlesArray.splice(i, 1);
+                particlesArray.push(new Particle()); // Add a new particle when one disappears
+                i--;
+            }
+        }
+    }
+
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        handleParticles();
+        requestAnimationFrame(animate);
+    }
+
+    init();
+    animate();
 </script>
-    </body>
+</body>
 </html>
