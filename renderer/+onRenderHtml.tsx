@@ -21,6 +21,22 @@ function onRenderHtml(pageContext: PageContextServer) {
           <link rel="preconnect" href="https://fonts.googleapis.com">
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
           <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+          <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Vijaykoushik S",
+              "image": "https://svijaykoushik.github.io/avatar.jpg",
+              "jobTitle": "Zero-to-One Architect | SaaS & Blockchain Engineer",
+              "description": "Building complex solutions in SaaS, blockchain, and fintech with expertise in financial systems, Web3, and workforce analytics.",
+              "url": "https://svijaykoushik.github.io",
+              "sameAs": [
+                "https://linkedin.com/in/svijaykoushik",
+                "https://twitter.com/svijaykoushik",
+                "https://github.com/svijaykoushik"
+              ]
+            }
+          </script>
           <style>
             ::-webkit-scrollbar {
               width: 8px;
