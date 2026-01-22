@@ -1,66 +1,61 @@
 # Copilot Instructions
 
 ## Project Overview
-A responsive portfolio website for Vijaykoushik S (Senior Full Stack Developer & Technical Lead) showcasing expertise in SaaS development, blockchain, and fintech. Built with React 19, Vite, and Tailwind CSS 4 with bilingual support (English/Tamil).
+Single-page portfolio for Vijaykoushik S showcasing SaaS, blockchain, and fintech expertise. Built with **Vike** (file-based routing), **React 19**, **Tailwind CSS 4**, and **Framer Motion**. Features bilingual support (EN/TA) with no backend—all content is static.
 
-## Architecture & Key Components
+## Critical Architecture
 
-### Core Structure
-- **App.tsx**: Root component managing single global state `lang` (Language type) for EN/TA bilingual support. Composes all page sections as a single-page layout.
-- **components/**: Section-based organization (Navbar, Hero, StackArchitecture, WorkCards, Timeline, TheLab, Footer)
-- **types.ts**: Central type definitions (`Language`, `Project`, `ExperienceItem`, `NavItem`) - update here when adding data structures
-- **metadata.json**: Portfolio metadata used by the hosting platform
+### File Structure & Routing
+- **Vike-based**: `/pages/index/+Page.tsx` is the main page. Routes auto-generated from file structure. Build uses Vike prerendering (see `/pages/+config.ts`).
+- **Root page component** (`+Page.tsx`): Manages single global state `const [lang, setLang] = useState<Language>('EN')` passed to all section components.
+- **`types.ts`**: Single source for TypeScript interfaces—`Language`, `Project`, `ExperienceItem`, `NavItem`. Add here before creating new component data structures.
 
-### Data Flow Pattern
-- Language toggle flows from `App` → `Footer` (as `toggleLang` callback) and then distributed to child components via `lang` prop
-- Project/experience data embedded directly in components as constants (e.g., `projects[]` in WorkCards.tsx, `navItems[]` in Navbar.tsx)
-- No external API calls for portfolio content; all static data
+### Language Flow (EN/TA Bilingual)
+- `+Page.tsx` holds `lang` state, passes to Footer via `toggleLang` callback
+- Footer's toggle updates `lang` → re-renders all child components
+- **Pattern**: `lang === 'TA' ? 'தமிழ் உரை' : 'English text'` (seen in Navbar, WorkCards, StackArchitecture)
+- All navigation items in `navItems` array have both `label` and `taLabel` fields
 
-### Component Patterns
-- **Motion wrapper**: All visible sections use `framer-motion`'s `motion.div` with `initial`/`whileInView`/`viewport={{ once: true }}` for scroll animations
-- **Language branching**: Ternary pattern: `lang === 'TA' ? 'Tamil text' : 'English text'` (examples in Navbar.tsx, WorkCards.tsx)
-- **Icon system**: Uses `lucide-react` icons (Terminal, Menu, X, ArrowUpRight, etc.) - import from 'lucide-react'
-- **Decoration elements**: Absolute positioned gradient blurs (e.g., `bg-cyan-900/10 rounded-full blur-3xl`) for visual polish
+### Component Data Patterns
+- **Data embedded in components**: `projects[]`, `navItems[]`, `experiences[]` defined as constants inside component files (not fetched)
+- **No API calls**: Portfolio is fully static
+- **Animation wrapper**: Every visible section wrapped in `motion.div` with `initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}`
 
-## Styling & Tailwind
-- **Config** ([tailwind.config.ts](../tailwind.config.ts)): Custom colors (cyan-400/500/900, slate-850/950), font families (Inter/Fira Code), extends defaults
-- **Color scheme**: Dark theme (slate-950 background), cyan accents, hover states use `group-hover:` patterns
-- **Responsive breakpoints**: Mobile-first, uses `sm:`, `md:`, `lg:` prefixes for multi-device layouts
+## Component Structure & Styling
+
+### Layout Sections (in `+Page.tsx` render order)
+1. Navbar (fixed, scroll-aware backdrop blur)
+2. Hero (gradient text, abstract terminal visual)
+3. StackArchitecture (tech stack with connecting lines)
+4. WorkCards (3 featured projects with icons)
+5. Timeline (career milestones with icons)
+6. TheLab (community contributions section)
+7. Footer (contact + language toggle)
+
+### Tailwind Palette
+- **Dark theme**: `bg-slate-950` (background), `slate-300` (body text), `slate-900` (cards)
+- **Cyan accents**: `cyan-400` (bright), `cyan-500` (medium), `cyan-900/10` (decorative blurs)
+- **Fonts**: `font-sans` (Inter), `font-mono` (Fira Code—used for branding, line numbers, labels)
+- **Decorative elements**: Absolute positioned `bg-cyan-900/10 rounded-full blur-3xl` for visual polish, `tabindex="-1"` on non-interactive elements
 
 ## Development Workflow
-- **Install**: `npm install`
-- **Dev server**: `npm run dev` (Vite on port 3000, host 0.0.0.0)
-- **Build**: `npm run build` (Vite output)
-- **Preview**: `npm run preview`
-- **Environment**: Set `GEMINI_API_KEY` in `.env.local` (currently unused but configured in vite.config.ts)
 
-## Project-Specific Patterns
+### Build & Dev Commands
+- `npm run dev` — Vike dev server (port 3000, host 0.0.0.0)
+- `npm run build` — Prerendering to static HTML (output: `dist/`)
+- `npm run preview` — Preview built site locally
+- Environment: `.env.local` for `GEMINI_API_KEY` (configured but unused)
 
-### Adding New Sections
-1. Create component in `components/` as `export const YourSection: React.FC<{ lang: Language }>` 
-2. Import and add to `App.tsx` main render in logical position
-3. Add navigation link in `Navbar.tsx` `navItems` array with both `label` and `taLabel`
-4. Use consistent section ID (e.g., `id="your-section"`) for anchor linking
+### Adding New Content/Sections
+1. **New project**: Add to `projects[]` in [WorkCards.tsx](../components/WorkCards.tsx), follow `Project` interface from `types.ts`
+2. **New nav item**: Add to `navItems[]` in [Navbar.tsx](../components/Navbar.tsx) with `label` and `taLabel`
+3. **New section**: Create component in `components/`, accept `lang: Language` prop, wrap in `motion.div`, then render in `+Page.tsx` main order
+4. **New data type**: Define interface in [types.ts](../types.ts), use in components
 
-### Adding Projects/Content
-1. Update component constant (e.g., `projects[]`, `experiences[]`) directly in the component file
-2. Add corresponding TypeScript interface in `types.ts` if creating new data structure
-3. Implement bilingual support with ternary operators in rendering
+## Key Patterns & Gotchas
 
-### Accessibility & Polish
-- Skip keyboard navigation with `tabindex="-1"` on decorative elements
-- Use `rel="noopener noreferrer"` for external links
-- Terminal/dev aesthetic: Use monospace fonts for branding, check `font-mono` class
-
-## Build & Deployment
-- Vite configuration handles React 19 transpilation via `@vitejs/plugin-react`
-- Tailwind CSS 4 uses new `@tailwindcss/vite` plugin (not PostCSS)
-- Alias `@:` resolves to root (see [vite.config.ts](../vite.config.ts) resolve.alias)
-- No build steps for dark mode or theming - single dark theme hardcoded
-
-## When Adding Features
-- Check existing `types.ts` before creating new interfaces
-- Maintain bilingual support by adding both English and Tamil labels
-- Use framer-motion for all animations (don't add CSS animations manually)
-- Keep component files under 200 lines; extract large data/logic to types.ts or separate utilities
-- Test scrolling animations work with `whileInView` viewport settings
+- **No React Router**: Page routing is file-based via Vike; use hash links (`#expertise`, `#work`) for in-page navigation
+- **All animations use Framer Motion**: Don't add CSS `@keyframes`; use `motion.div` with variants
+- **Icon library**: `lucide-react` for all icons (Terminal, Code, Blocks, Github, etc.)
+- **External links**: Always use `target="_blank" rel="noopener noreferrer"` (see Footer, WorkCards)
+- **Prerendering**: Static site—no runtime API calls, all content compiled at build time
