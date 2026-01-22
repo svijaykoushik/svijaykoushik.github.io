@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import StackArchitecture from './components/StackArchitecture';
-import WorkCards from './components/WorkCards';
-import Timeline from './components/Timeline';
-import TheLab from './components/TheLab';
-import Footer from './components/Footer';
-import { Language } from './types';
+import '../../index.css'
+import Navbar from '../../components/Navbar';
+import Hero from '../../components/Hero';
+import StackArchitecture from '../../components/StackArchitecture';
+import WorkCards from '../../components/WorkCards';
+import Timeline from '../../components/Timeline';
+import TheLab from '../../components/TheLab';
+import Footer from '../../components/Footer';
+import { Language } from '../../types';
 
-const App: React.FC = () => {
+const Page: React.FC = () => {
   const [lang, setLang] = useState<Language>('EN');
 
   const toggleLanguage = () => {
@@ -32,4 +33,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
+export default Page;
