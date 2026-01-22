@@ -29,10 +29,10 @@ const Footer: React.FC<FooterProps> = ({ lang, toggleLang }) => {
               <a href="https://linkedin.com/in/svijaykoushik" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-cyan-400 transition-colors">
                 <Linkedin className="w-6 h-6" />
               </a>
-              <a href="#" className="text-slate-400 hover:text-cyan-400 transition-colors">
+              <a href="https://github.com/svijaykoushik" className="text-slate-400 hover:text-cyan-400 transition-colors">
                 <Github className="w-6 h-6" />
               </a>
-              <a href="mailto:moon01man@gmail.com" className="text-slate-400 hover:text-cyan-400 transition-colors">
+              <a href="mailto:svijaykoushik@hotmail.com" className="text-slate-400 hover:text-cyan-400 transition-colors">
                 <Mail className="w-6 h-6" />
               </a>
             </div>
