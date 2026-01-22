@@ -1,12 +1,7 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Vijaykoushik, S. - Zero-to-One Architect
 
-# Run and deploy your AI Studio app
+This is my personal website
 
-This contains everything you need to run your app locally.
-
-View your app in AI Studio: https://ai.studio/apps/drive/1mPXwaH46W9G4cf7p2zK2fmCXgm7GThDY
 
 ## Run Locally
 
@@ -15,6 +10,22 @@ View your app in AI Studio: https://ai.studio/apps/drive/1mPXwaH46W9G4cf7p2zK2fm
 
 1. Install dependencies:
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
+2. Run the app:
    `npm run dev`
+
+## License
+
+This repository is governed by the following License
+
+Copyright (C) 2017, 2018  Vijaykoushik, S.
+
+   This program is free software: you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation, either version 3 of the License, or
+   (at your option) any later version.
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+   You should have received a copy of the GNU General Public License
+   along with this program.  If not, see <http://www.gnu.org/licenses/>.
