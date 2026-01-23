@@ -6,7 +6,7 @@ async function onBeforeRender() {
   return {
     pageContext: {
       metadata,
-      title: metadata.title ?? 'Vijaykoushik S | Zero-to-One Architect'
+      title: metadata.name ?? 'Vijaykoushik S | Zero-to-One Architect'
     }
   }
 }
