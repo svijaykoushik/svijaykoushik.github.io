@@ -1,6 +1,6 @@
 import React from 'react'
 import { renderToString } from 'react-dom/server'
-import { escapeInject } from 'vike/server'
+import { dangerouslySkipEscape, escapeInject } from 'vike/server'
 import type { PageContextServer } from 'vike/types'
 
 export { onRenderHtml }
@@ -54,7 +54,7 @@ function onRenderHtml(pageContext: PageContextServer) {
           </style>
         </head>
         <body class="bg-slate-950 text-slate-300 antialiased selection:bg-cyan-500/30 selection:text-cyan-200">
-          <div id="root">${html}</div>
+          <div id="root">${dangerouslySkipEscape(html)}</div>
         </body>
       </html>
     `
