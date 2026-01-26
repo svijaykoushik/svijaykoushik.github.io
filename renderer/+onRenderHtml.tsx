@@ -18,6 +18,25 @@ function onRenderHtml(pageContext: PageContextServer) {
           <meta charset="UTF-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <title>${title ?? 'Vijaykoushik S | Zero-to-One Architect'}</title>
+          <meta name="description" content="Portfolio of a Senior Full Stack Developer & Technical Lead specializing in Greenfield SaaS Development. I architect scalable systems from zero to one." />
+          <meta name="author" content="Vijaykoushik S" />
+
+          <meta property="og:type" content="website" />
+          <meta property="og:site_name" content="Vijaykoushik S Portfolio" />
+          <meta property="og:title" content="Vijaykoushik S | Zero-to-One Architect" />
+          <meta property="og:description" content="Senior Full Stack Developer & Technical Lead specializing in Greenfield SaaS Development. I architect scalable systems from zero to one." />
+
+          <meta property="og:image" content="http://svijaykoushik.github.io/og_image.png" />
+          <meta property="og:image:secure_url" content="https://svijaykoushik.github.io/og_image.png" />
+          <meta property="og:image:type" content="image/png" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          <meta property="og:image:alt" content="A professional personal brand graphic for Vijay Koushik, Senior Software Developer. The left side features a complex, glowing cyan blueprint-style logo combining a winged horse (Pegasus) and a dragon, overlaid with the initials 'VKJ'. The right side displays the name 'VIJAY KOUSHIK' in a bold, cyan sans-serif font, with the title 'Sr. Software Developer' written below it in a clean, monospaced typeface against a dark navy background." />
+          <meta property="og:url" content="https://svijaykoushik.github.io" />
+          <meta property="og:locale" content="en_US" />
+          <meta property="og:locale:alternate" content="ta_IN" />
+          <meta name="twitter:card" content="summary_large_image" />
+
           <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
           <link rel="icon" type="image/svg+xml" href="favicon.svg" />
           <link rel="shortcut icon" href="favicon.ico" />
