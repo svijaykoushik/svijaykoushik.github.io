@@ -1,3 +1,7 @@
+<div align="center">
+<img width="907.25" height="475" alt="Banner" src="public/og_image.png" />
+</div>
+
 # Vijaykoushik, S. - Zero-to-One Architect
 
 This is my personal website
@@ -17,7 +21,7 @@ This is my personal website
 
 This repository is governed by the following License
 
-Copyright (C) 2017, 2018  Vijaykoushik, S.
+Copyright (C) 2017, 2018, 2026  Vijaykoushik, S.
 
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
