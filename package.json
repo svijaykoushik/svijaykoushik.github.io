@@ -1,0 +1,27 @@
+{
+  "name": "vijaykoushik-s---portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vike dev",
+    "build": "vike build",
+    "preview": "vike preview"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.18",
+    "framer-motion": "^12.28.1",
+    "lucide-react": "^0.562.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "tailwindcss": "^4.1.18",
+    "vike": "^0.4.252",
+    "vike-react": "^0.6.18"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}
