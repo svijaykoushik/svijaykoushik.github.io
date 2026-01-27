@@ -18,7 +18,7 @@ const projects: Project[] = [
   {
     title: "Certifily",
     category: "Web3 / Blockchain",
-    description: "Document verification system built on the Flow Blockchain. Allows institutions to mint and verify encrypted credentials securely. Innovation hackathon winner.",
+    description: "A professional credentials platform built on the Flow Blockchain. Allows institutions for permanent, trusted & verifiable storage of digital credentials. Winner of the Flow international blockchain hackathon 2023.",
     tech: ["Flow Blockchain", "Cadence", "React", "Cryptography"],
     link: "https://certifi.ly"
   },
