@@ -22,13 +22,17 @@ const experiences: ExperienceItem[] = [
   },
   {
     year: "2015 - 2020",
-    title: "Analytical Sabbatical & Upskilling",
-    company: "Public Sector Aspirant",
+    title: "Independent Researcher & Technical Writer",
+    company: "Sabbatical / Public Sector Aspirant",
     type: 'sabbatical',
     description: [
-      "Dedicated period mastering Quantitative Aptitude & Logical Reasoning.",
-      "Developed high-level problem solving frameworks applied to algorithmic challenges.",
-      "Honed discipline and data interpretation skills."
+      "Dedicated period mastering Quantitative Aptitude & Logical Reasoning, developing high-level problem solving frameworks.",
+      <>
+        Top 500 Distinguished Author <a href="https://dev.to/svijaykoushik" target="_blank" rel="noreferrer" className="text-cyan-400 hover:text-cyan-300 underline decoration-cyan-500/30 transition-colors">DEV Community</a>: Authored the technical blog "<a href="https://svijaykoushik.github.io/blog" target="_blank" rel="noreferrer" className="text-cyan-400 hover:text-cyan-300 underline decoration-cyan-500/30 transition-colors">Learn from my experience</a>," gaining recognition as a top contributor among global developers.
+      </>,
+      <>
+        Top 7 Post of the Week: Published "<a href="https://dev.to/svijaykoushik/3-amazing-ways-to-generate-random-numbers-without-math-random-4e84" target="_blank" rel="noreferrer" className="text-cyan-400 hover:text-cyan-300 underline decoration-cyan-500/30 transition-colors">3 amazing ways to generate random numbers</a>," selected as a featured post for its clarity in explaining algorithmic concepts.
+      </>
     ]
   },
   {
@@ -103,7 +107,7 @@ const Timeline: React.FC<TimelineProps> = ({ lang }) => {
                       {item.description.map((point, i) => (
                         <li key={i} className="flex items-start gap-2 text-sm text-slate-400">
                           <span className="mt-1.5 w-1 h-1 bg-cyan-500 rounded-full flex-shrink-0"></span>
-                          {point}
+                          <span>{point}</span>
                         </li>
                       ))}
                     </ul>

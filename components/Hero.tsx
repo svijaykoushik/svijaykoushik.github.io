@@ -47,7 +47,9 @@ const Hero: React.FC = () => {
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
               <a 
-                href="#"
+                href="/Vijaykoushik_S_Senior_Full_Stack_Developer.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group px-6 py-3 border border-slate-700 hover:border-cyan-500/50 text-slate-300 hover:text-white font-mono rounded-md transition-all flex items-center gap-2 bg-slate-900/50"
               >
                 <Download className="w-4 h-4" />
