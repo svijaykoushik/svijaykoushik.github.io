@@ -15,6 +15,17 @@ function onRenderHtml(pageContext: PageContextServer) {
       <!DOCTYPE html>
       <html lang="en" class="scroll-smooth">
         <head>
+
+          <!-- Google tag (gtag.js) -->
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-S3T2XVC25J"></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-S3T2XVC25J');
+          </script>
+
           <meta charset="UTF-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <title>${title ?? 'Vijaykoushik S | Zero-to-One Architect'}</title>
@@ -80,17 +91,6 @@ function onRenderHtml(pageContext: PageContextServer) {
         </head>
         <body class="bg-slate-950 text-slate-300 antialiased selection:bg-cyan-500/30 selection:text-cyan-200">
           <div id="root">${dangerouslySkipEscape(html)}</div>
-
-          <!-- Google tag (gtag.js) -->
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-S3T2XVC25J"></script>
-          <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-S3T2XVC25J');
-          </script>
-
         </body>
       </html>
     `
